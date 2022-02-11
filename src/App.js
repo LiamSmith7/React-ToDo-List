@@ -1,6 +1,7 @@
 import './App.css';
 import { useState } from "react"
 
+// Searches an array for a specific item, returns true if it finds it.
 const searchArray = (array, searchingFor) => {
     for(let i = 0; i < array.length; i++){
         if(array[i] == searchingFor) return true;
@@ -9,7 +10,6 @@ const searchArray = (array, searchingFor) => {
 }
 
 function App() {
-    
     const [listItems, updateList] = useState([]); // List items
     const [archivedItems, updateArchive] = useState([]); // Archived items
     const [showingArchive, toggleArchive] = useState(false); // Which screen is being shown
@@ -61,7 +61,7 @@ function App() {
             </div>
         );
     }
-    // Archived task list item
+    // Rerchived task list item
     function ArchivedItem(index, value){
         return (
             <div className="archived_item" key={index}>
@@ -70,7 +70,7 @@ function App() {
             </div>
         );
     }
-    
+
     return (
         <div id="main">
             <div id="top_bar">
